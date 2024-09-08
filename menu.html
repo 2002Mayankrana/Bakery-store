@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CAKE WALKERS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        /* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 60px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    animation: fadeIn 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust height if needed */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Image Grid Styles */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.img-container img:hover {
+    transform: scale(1.05);
+}
+
+.code {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Preview Image Styles */
+#previewImage {
+    max-width: 100%;
+    max-height: 100%;
+    animation: fadeIn 0.5s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                <h1 class="m-0 display-4 text-uppercase text-white">CAKE WALKERS</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="menu.html" class="nav-item nav-link active">Menu</a>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Menu</h1>
+            <div class="d-inline-flex mb-lg-5">
+                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Menu</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Menu Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu & Pricing</h4>
+                <h1 class="display-4">Competitive Pricing</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Weight Pricing (Basic) </h1>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            <h5 class="menu-price" style="position: relative; width: 100px;">Rs 300</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>0.5 kg Cake Base</h4>
+                            <p class="m-0"></p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            <h5 class="menu-price" style="position: relative; width: 100px;">Rs 490</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>1.0 kg Cake Base</h4>
+                            <p class="m-0"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            <h5 class="menu-price" style="position: relative; width: 100px;">Rs 680</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>1.5 kg Cake Base</h4>
+                            <p class="m-0"></p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mb-5">
+                        <div class="col-4 col-sm-3">
+                            
+                            <h5 class="menu-price" style="position: relative; width: 100px;">Rs 800</h5>
+                        </div>
+                        <div class="col-8 col-sm-9">
+                            <h4>2.0 kg Cake Base</h4>
+                            <p class="m-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="mb-5">Select Decoration for Cake</h1>
+                    <button id="selectButton" class="btn btn-primary">Select Decoration</button>
+                    <br>
+                    <hr>
+                    <div class="alert alert-info">
+                        <h4>NOTE-</h4>
+                    <hr>
+                    <h5 style="padding-left: 10px;">Decoration price varies from Rs 150 to Rs 400 based on your choice.</h5>
+                    <hr><h5 style="padding-left: 10px;">Go through the available decorations and copy the code of your preferred Decoration.</h5>
+                    <hr><h5 style="padding-left: 10px;">The total cost will be the weight price plus the Decoration price.</h5>
+                    </div>
+                    
+                    
+                </div>
+                
+                <!-- Popup Modal for Image Selection -->
+                <div id="imageModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="image-grid">
+                            <!-- Predefined images go here -->
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0006.jpg" alt="Image 1">
+                                <div class="code">d1</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0005.jpg" alt="Image 2">
+                                <div class="code">d2</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0007.jpg" alt="Image 1">
+                                <div class="code">d3</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0008.jpg" alt="Image 2">
+                                <div class="code">d4</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0009.jpg" alt="Image 1">
+                                <div class="code">d5</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0010.jpg" alt="Image 2">
+                                <div class="code">d6</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0011.jpg" alt="Image 1">
+                                <div class="code">d7</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0012.jpg" alt="Image 2">
+                                <div class="code">d8</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0013.jpg" alt="Image 1">
+                                <div class="code">d9</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0014.jpg" alt="Image 2">
+                                <div class="code">d10</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0015.jpg" alt="Image 1">
+                                <div class="code">d11</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0016.jpg" alt="Image 2">
+                                <div class="code">d12</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0017.jpg" alt="Image 1">
+                                <div class="code">d13</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0018.jpg" alt="Image 2">
+                                <div class="code">d14</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0019.jpg" alt="Image 1">
+                                <div class="code">d15</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0020.jpg" alt="Image 2">
+                                <div class="code">d16</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0021.jpg" alt="Image 1">
+                                <div class="code">d17</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0022.jpg" alt="Image 2">
+                                <div class="code">d18</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0023.jpg" alt="Image 1">
+                                <div class="code">d19</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0024.jpg" alt="Image 2">
+                                <div class="code">d20</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0025.jpg" alt="Image 1">
+                                <div class="code">d21</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0026.jpg" alt="Image 2">
+                                <div class="code">d22</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0027.jpg" alt="Image 1">
+                                <div class="code">d23</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0028.jpg" alt="Image 2">
+                                <div class="code">d24</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0029.jpg" alt="Image 1">
+                                <div class="code">d25</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0030.jpg" alt="Image 2">
+                                <div class="code">d26</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0031.jpg" alt="Image 1">
+                                <div class="code">d27</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0032.jpg" alt="Image 2">
+                                <div class="code">d28</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0033.jpg" alt="Image 1">
+                                <div class="code">d29</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0034.jpg" alt="Image 2">
+                                <div class="code">d30</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0035.jpg" alt="Image 1">
+                                <div class="code">d31</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0036.jpg" alt="Image 2">
+                                <div class="code">d32</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0037.jpg" alt="Image 1">
+                                <div class="code">d33</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0038.jpg" alt="Image 2">
+                                <div class="code">d34</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0039.jpg" alt="Image 1">
+                                <div class="code">d35</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0040.jpg" alt="Image 2">
+                                <div class="code">d36</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0040.jpg" alt="Image 1">
+                                <div class="code">d37</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0041.jpg" alt="Image 2">
+                                <div class="code">d38</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0042.jpg" alt="Image 1">
+                                <div class="code">d39</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0043.jpg" alt="Image 2">
+                                <div class="code">d40</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0044.jpg" alt="Image 1">
+                                <div class="code">d41</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0045.jpg" alt="Image 2">
+                                <div class="code">d42</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0046.jpg" alt="Image 1">
+                                <div class="code">d43</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0047.jpg" alt="Image 2">
+                                <div class="code">d44</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0048.jpg" alt="Image 1">
+                                <div class="code">d45</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0049.jpg" alt="Image 2">
+                                <div class="code">d46</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0050.jpg" alt="Image 1">
+                                <div class="code">d47</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0051.jpg" alt="Image 2">
+                                <div class="code">d48</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0052.jpg" alt="Image 1">
+                                <div class="code">d49</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0053.jpg" alt="Image 2">
+                                <div class="code">d50</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0054.jpg" alt="Image 1">
+                                <div class="code">d51</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0055.jpg" alt="Image 2">
+                                <div class="code">d52</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0056.jpg" alt="Image 1">
+                                <div class="code">d53</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0057.jpg" alt="Image 2">
+                                <div class="code">d54</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0058.jpg" alt="Image 1">
+                                <div class="code">d55</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0059.jpg" alt="Image 2">
+                                <div class="code">d56</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0060.jpg" alt="Image 1">
+                                <div class="code">d57</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0061.jpg" alt="Image 2">
+                                <div class="code">d58</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0062.jpg" alt="Image 1">
+                                <div class="code">d59</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0063.jpg" alt="Image 2">
+                                <div class="code">d60</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0064.jpg" alt="Image 1">
+                                <div class="code">d61</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0065.jpg" alt="Image 2">
+                                <div class="code">d62</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0066.jpg" alt="Image 1">
+                                <div class="code">d63</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0067.jpg" alt="Image 2">
+                                <div class="code">d64</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0068.jpg" alt="Image 1">
+                                <div class="code">d65</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0069.jpg" alt="Image 2">
+                                <div class="code">d66</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0070.jpg" alt="Image 1">
+                                <div class="code">d67</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0071.jpg" alt="Image 2">
+                                <div class="code">d68</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0072.jpg" alt="Image 1">
+                                <div class="code">d69</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0073.jpg" alt="Image 2">
+                                <div class="code">d70</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0074.jpg" alt="Image 1">
+                                <div class="code">d71</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0075.jpg" alt="Image 2">
+                                <div class="code">d72</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0076.jpg" alt="Image 1">
+                                <div class="code">d73</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0077.jpg" alt="Image 2">
+                                <div class="code">d74</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0078.jpg" alt="Image 1">
+                                <div class="code">d75</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0079.jpg" alt="Image 2">
+                                <div class="code">d76</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0080.jpg" alt="Image 1">
+                                <div class="code">d77</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0081.jpg" alt="Image 2">
+                                <div class="code">d78</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0082.jpg" alt="Image 1">
+                                <div class="code">d79</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0083.jpg" alt="Image 2">
+                                <div class="code">d80</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0084.jpg" alt="Image 1">
+                                <div class="code">d81</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0085.jpg" alt="Image 2">
+                                <div class="code">d82</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0086.jpg" alt="Image 1">
+                                <div class="code">d83</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0087.jpg" alt="Image 2">
+                                <div class="code">d84</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0088.jpg" alt="Image 1">
+                                <div class="code">d85</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0089.jpg" alt="Image 2">
+                                <div class="code">d86</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0090.jpg" alt="Image 1">
+                                <div class="code">d87</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0091.jpg" alt="Image 2">
+                                <div class="code">d88</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0092.jpg" alt="Image 1">
+                                <div class="code">d89</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0093.jpg" alt="Image 2">
+                                <div class="code">d90</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0094.jpg" alt="Image 1">
+                                <div class="code">d91</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0095.jpg" alt="Image 2">
+                                <div class="code">d92</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0096.jpg" alt="Image 1">
+                                <div class="code">d93</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0097.jpg" alt="Image 2">
+                                <div class="code">d94</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0098.jpg" alt="Image 1">
+                                <div class="code">d95</div>
+                            </div>
+                            <div class="img-container">
+                                <img src="img/cakes/IMG-20240805-WA0099.jpg" alt="Image 2">
+                                <div class="code">d96</div>
+                            </div>
+                            
+                            <!-- Add more image containers as needed -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Popup Modal for Image Preview -->
+                <div id="previewModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img id="previewImage" src="" alt="Selected Image">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Menu End -->
+
+
+    <!-- Reservation Start -->
+    <div class="container-fluid my-5">
+        <div class="container">
+            <div class="reservation position-relative overlay-top overlay-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 my-5 my-lg-0">
+                        <div class="p-5">
+                            <div class="mb-4">
+                                <h1 class="display-3 text-primary">15% OFF</h1>
+                                <h1 class="text-white">For Your First Order</h1>
+                            </div>
+                            <p class="text-white">Book your Cake !! We will Connect with you and provide you the final calculated amount for your order. </p>
+                            <ul class="list-inline text-white m-0">
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Eggless and Tasty</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Affordable</li>
+                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Best Quality</li>
+                            </ul>
+                            <hr><br>
+                            <p class="text-white">If you want a Custom Design then write "0" in the Decoration Code and we will contact you for your custom design.</p><hr>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center p-5" style="background: rgba(51, 33, 29, .8);">
+                            <h1 class="text-white mb-4 mt-5">Book Your CAKE</h1>
+                            <form class="mb-5" action="https://script.google.com/macros/s/AKfycbz_BmaBAPB81TyaOrsQk31_EhG57AVw10NneO7S6JNSVd6M-sptnD_mekPVSgxx1SuLtw/exec" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-transparent border-primary p-4 " name="name" placeholder="Name"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control bg-transparent border-primary p-4" name="email" placeholder="Email"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control bg-transparent border-primary p-4" name="mobile" placeholder="Mobile"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" name="date" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-transparent border-primary p-4 datetimepicker-input" name="time" placeholder="Time" data-target="#time" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-transparent border-primary p-4" name="code" placeholder="Decoration Code"
+                                        required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;" name="weight">
+                                        <option selected>Select Weight</option>
+                                        <option value="0.5" >0.5 kg</option>
+                                        <option value="1.0">1.0 kg</option>
+                                        <option value="1.5">1.5 kg</option>
+                                        <option value="2.0">2.0 kg</option>
+                                    </select>
+                                </div>
+                                <input type="hidden" name="order_date" id="date-field">
+                                
+                                <div>
+                                    <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Book Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation End -->
+
+ <!-- Footer Start -->
+ <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
+    <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Get In Touch</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Mayur Vihar Phase 3, New Delhi-110096</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>91 9910257012</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>cake.walkers29@gmail.com</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
+            <div class="d-flex justify-content-start">
+
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.me/919910257012"><i class="fab fa-whatsapp"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://www.instagram.com/cake_walkers29?igsh=eW42dHRsNW1rbWNj"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Open Hours</h4>
+            <div>
+                <h6 class="text-white text-uppercase">Monday - Friday</h6>
+                <p>8.00 AM - 8.00 PM</p>
+                <h6 class="text-white text-uppercase">Saturday - Sunday</h6>
+                <p>2.00 PM - 8.00 PM</p>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('selectButton').addEventListener('click', function() {
+    const imageModal = document.getElementById('imageModal');
+    imageModal.classList.add('show');
+
+    // Attach event listeners to predefined images
+    const imageGrid = imageModal.querySelector('.image-grid');
+    
+    imageGrid.querySelectorAll('img').forEach(img => {
+        img.addEventListener('click', function() {
+            const previewModal = document.getElementById('previewModal');
+            const previewImage = document.getElementById('previewImage');
+            previewImage.src = img.src;
+            previewModal.classList.add('show');
+        });
+    });
+
+    imageGrid.querySelectorAll('.code').forEach(code => {
+        code.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent image click event
+            navigator.clipboard.writeText(code.innerText).then(() => {
+                alert('Code copied to clipboard!');
+            });
+        });
+    });
+});
+
+// Close Modals
+document.querySelectorAll('.modal .close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function() {
+        closeBtn.closest('.modal').classList.remove('show');
+    });
+});
+
+// Close Modals if clicked outside
+window.addEventListener('click', function(event) {
+    const imageModal = document.getElementById('imageModal');
+    const previewModal = document.getElementById('previewModal');
+    if (event.target === imageModal || event.target === previewModal) {
+        imageModal.classList.remove('show');
+        previewModal.classList.remove('show');
+    }
+});
+
+    </script>
+    <!-- Include jQuery and DateTimePicker (make sure these scripts are properly included) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(document).ready(function(){
+            // Initialize the DateTimePicker for date and time
+            $('#date').datetimepicker({
+                format: 'L', // Adjust format as needed
+            });
+    
+            $('#time').datetimepicker({
+                format: 'LT', // Adjust format as needed
+            });
+    
+            // Handle form submission
+            $('form').on('submit', function(e) {
+                e.preventDefault(); // Prevent the default form submission
+                
+                // Set the hidden field value
+                var selectedDate = $('#date').data("datetimepicker").date().format('YYYY-MM-DD');
+                $('#date-field').val(selectedDate);
+    
+                // Show SweetAlert on form submission
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Booking Successful!',
+                    text: 'Your booking has been successfully submitted.',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                        window.location.href = 'index.html'; // Redirect to homepage
+                    });
+            });
+        });
+    </script>
+        
+
+</body>
+
+</html>
